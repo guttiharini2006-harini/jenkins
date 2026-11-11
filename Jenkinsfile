@@ -8,7 +8,7 @@ pipeline {
         }
         stage('compile'){
             steps{
-                bat 'javac Factorial.java TestFactorial.jav'
+                bat 'javac Factorial.java TestFactorial.java'
             }
         }
         stage('test'){
