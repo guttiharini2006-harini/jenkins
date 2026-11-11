@@ -16,15 +16,14 @@ pipeline {
                 bat 'java TestFactorial.java'
             }
         }
-        stage('Package JAR'){
-            steps{
-                bat '"C:\\Program Files\\Java\\jdk-17\\bin\\jar.exe" cfm factorial.jar -r manifest.txt */class'
-            }
+        
+    }
+    post{
+        success{
+            echo "successful!"
         }
-        stage('Archive JAR'){
-            steps{
-                archiveArtifacts: artifact factorial.jar
-            }
+        failure{
+            echo "failure"
         }
     }
 }
