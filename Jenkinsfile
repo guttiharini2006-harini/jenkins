@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Package JAR'){
             steps{
-                bat '"C:\Program Files\Java\jdk-17\bin\jar.exe" cfm factorial.jar -r manifest.txt */class'
+                bat '"C:\\Program Files\\Java\\jdk-17\\bin\\jar.exe" cfm factorial.jar -r manifest.txt */class'
             }
         }
         stage('Archive JAR'){
